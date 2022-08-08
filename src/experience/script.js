@@ -1,11 +1,10 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import gsap from 'gsap'
 
 
 let camera, renderer, scene;
-let geometry, mesh, material;
+
 const loader = new GLTFLoader()
 
 // init
