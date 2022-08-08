@@ -1,0 +1,115 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  color: #eee;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  overflow: hidden;
+}
+
+canvas{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.hero{
+  padding: 5em 4em 3em 3.5em;
+  width: 50%;
+}
+
+.title{
+  font-size: 2.5em;
+  color: rgb(25, 173, 6);
+  margin-bottom: .5em;
+}
+
+.text{
+  letter-spacing: 1.2px;
+  line-height: 1em;
+  font-size: 1em;
+}
+.text2{
+  letter-spacing: 1.2px;
+  line-height: 1em;
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+
+.btn{
+  background-color: rgb(253, 253, 253);
+  color: '0x181818';
+  padding: .5em 1em;
+  border-radius: 3px;
+  text-decoration: none;
+  font-size: 1em;
+  border-radius: 20px;
+  border: none;
+
+  margin-right: .5em;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+
+}
+
+.pricing h1{
+  text-align: center;
+  font-size: 2em;
+}
+
+.pricing-table{
+  padding: 2em 0 1em 0;
+  
+  display: flex;
+  justify-content: center;
+}
+
+.pricing-card{
+  background-color: rgba(255,255,255, .3);
+  padding: 1.5em;
+  border-radius: 10px;
+  width: 400px;
+  transform: translate(-100px, -100px);
+  opacity: 0;
+  animation: 1s slideIn;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+ 
+}
+
+@keyframes slideIn{
+  to{
+    transform: translate(0,0);
+    opacity: 1;
+  }
+}
+
+.pricing-card:nth-child(2){
+  margin: 0 2.5em;
+  transform: translate(0, 100px);
+  animation-delay: 1s;
+}
+
+.pricing-card:nth-child(3){
+  transform: translate(100px, 100px);
+
+}
+
+.pricing-card .title{
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.pricing-card .info{
+  margin: 1em 0;
+}
+
+
+
+
