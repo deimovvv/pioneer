@@ -9,9 +9,10 @@ root.render(
   <React.StrictMode>
 
 <TolgeeProvider
-        filesUrlPrefix="i18n/"
-        apiUrl={process.env.REACT_APP_TOLGEE_API_URL}
-        apiKey={process.env.REACT_APP_TOLGEE_API_KEY}
+         staticData={{
+          en: () => import('./i18n/en.json'),
+          de: () => import('./i18n/de-DE.json'),
+        }}
         loadingFallback={<>Loading...</>}
     >
 

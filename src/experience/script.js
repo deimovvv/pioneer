@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+
 import gsap from 'gsap'
 
 
@@ -11,7 +12,7 @@ const loader = new GLTFLoader()
 
 
  export function init(){
-
+ 
 
  camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 0.01, 10 );
  camera.position.z = 5;
@@ -27,6 +28,10 @@ scene.add(mesh) */
 /* Light */
 	const light = new THREE.AmbientLight(0xffffff, 7)
 	scene.add(light)
+
+	const ambient = new THREE.PointLight(0xf022f1, 20)
+	scene.add(ambient)
+
 
  /* loader */
  loader.load(
@@ -75,10 +80,6 @@ scene.add(mesh) */
 		
         })
 
-
-
-
-		console.log(model);
 		scene.add(model)
 	 })
 
@@ -86,7 +87,7 @@ scene.add(mesh) */
 
  renderer = new THREE.WebGLRenderer( { antialias: true } );
 renderer.setSize( window.innerWidth, window.innerHeight );
-renderer.setClearColor( 0x333333, 1)
+renderer.setClearColor( 0x333033, 1)
 renderer.setAnimationLoop( animation );
 document.body.appendChild( renderer.domElement );
 
@@ -108,7 +109,6 @@ function animation() {
 
 	
   
-
 
 	renderer.render( scene, camera );
 
